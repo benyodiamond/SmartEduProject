@@ -3681,7 +3681,6 @@ a.link-style3 {
 	border: none;
 	border-bottom: 1px solid #efefef;
 }
-.post-btn{}
 .post-btn button.hover-btn-new::before, .post-btn button.hover-btn-new::after {
     background: #eea412;
     content: '';
@@ -3829,7 +3828,6 @@ a.link-style3 {
 .course-item{
 	background: #ffffff;
 }
-.course-item{}
 .course-title > h2 {
     margin: 15px 0;
     padding: 0px;
