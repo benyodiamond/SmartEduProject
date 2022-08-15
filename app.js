@@ -14,7 +14,7 @@ const app = express();
 
 //CONNECT DB
 mongoose
-  .connect('mongodb+srv://dbUser:EEiEcewwUuKlwgqf@cluster0.dwyp1ty.mongodb.net/smartedu-db?retryWrites=true&w=majority', {
+  .connect('mongodb+srv://dbUser:EEiEcewwUuKlwgqf@cluster0.dwyp1ty.mongodb.net/smartedu-db?retryWrites=true', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -38,7 +38,7 @@ app.use(
     secret: 'my_keyboard_cat',
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: 'mongodb://127.0.0.1/smartedu-db' }),
+    store: MongoStore.create({ mongoUrl: 'mongodb+srv://dbUser:EEiEcewwUuKlwgqf@cluster0.dwyp1ty.mongodb.net/smartedu-db?retryWrites=true' }),
   })
 );
 app.use(flash());
