@@ -13,9 +13,8 @@ const { application } = require('express');
 const app = express();
 
 //CONNECT DB
-
 mongoose
-  .connect('mongodb://127.0.0.1/smartedu-db', {
+  .connect('mongodb+srv://dbUser:EEiEcewwUuKlwgqf@cluster0.dwyp1ty.mongodb.net/smartedu-db?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -63,7 +62,7 @@ app.use('/courses', courseRoute);
 app.use('/category', categoryRoute);
 app.use('/users', userRoute);
 
-const port = 3000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`App stated on port ${port}`);
 });

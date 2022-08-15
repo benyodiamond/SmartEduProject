@@ -1,6 +1,7 @@
 const express = require('express');
 const pageController = require('../controllers/pageController');
 const redirectMiddlewares = require('../middlewares/redirectMiddlewares');
+
 const router = express.Router();
 
 router.route('/').get(pageController.getIndexPage);

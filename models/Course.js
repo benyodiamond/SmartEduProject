@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const slugify = require('slugify');
-const Category = require('./Category');
 const Schema = mongoose.Schema;
 
 const CourseSchema = new Schema({
@@ -17,20 +16,19 @@ const CourseSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now,
-  }, 
+  },
   slug: {
-    type: String,
-    unique: true,
+    type:String,
+    unique: true
   },
   category: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Category',
+    type:mongoose.Schema.Types.ObjectId,
+    ref:'Category'
   },
   user: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
-    }
-  
+    type:mongoose.Schema.Types.ObjectId,
+    ref:'User'
+  }
 });
 
 CourseSchema.pre('validate', function(next){
